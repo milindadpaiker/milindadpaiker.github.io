@@ -14,6 +14,7 @@
     <a class="brand" href="./">Milind Adpaiker</a>
     <a href="./#blog">Blog</a>
     <a href="./#published">Talks &amp; writing</a>
+    <a href="./#videos">Videos</a>
     <a href="./#built">Projects</a>
     <a class="active" href="resume.html">Resume</a>
   </div>
@@ -24,93 +25,103 @@
     <p class="eyebrow">Resume</p>
     <h1>Milind Adpaiker</h1>
     <p class="role">Senior Software Engineer at Avalara · Goa, India</p>
-    <p class="lead">Software engineer and former software architect with 20+ years of experience designing and building distributed systems and scalable SaaS platforms. I led the transformation of a monolith into event-driven microservices handling more than 5 million requests per minute, and I now build production AI agents with LangGraph, the Model Context Protocol (MCP) and retrieval-augmented generation (RAG).</p>
+    <p class="lead">20+ years designing and building distributed systems and SaaS platforms; now building production AI agents.</p>
     <div class="btns">
       <a class="btn primary" href="https://www.linkedin.com/in/milind-adpaiker-770bb025/">LinkedIn</a>
       <a class="btn" href="mailto:milind.adpaiker@gmail.com">Email</a>
     </div>
   </header>
 
+  <section id="summary">
+    <h2>Summary</h2>
+    <p>Software engineer and former software architect with 20+ years of experience designing and building distributed systems and scalable SaaS platforms. Led the transformation of a monolithic system into event-driven microservices handling more than 5 million requests per minute. Currently builds production AI agents with LangGraph, the Model Context Protocol (MCP) and retrieval-augmented generation (RAG), alongside cloud-native microservices.</p>
+  </section>
+
   <section id="skills">
     <h2>Skills</h2>
     <div class="skill-group">
-      <h3>Generative AI &amp; agents</h3>
-      <ul class="chips"><li>LangGraph</li><li>LangChain</li><li>MCP servers &amp; clients</li><li>RAG</li><li>Vector databases</li><li>Multi-agent orchestration</li><li>A2A protocol</li><li>Tool calling</li><li>Prompt engineering</li></ul>
-    </div>
-    <div class="skill-group">
-      <h3>Machine learning</h3>
-      <ul class="chips"><li>PyTorch</li><li>scikit-learn</li><li>Neural networks</li><li>CNNs</li><li>LLM &amp; transformer fundamentals</li><li>Streamlit</li></ul>
+      <h3>Generative AI and Agents</h3>
+      <ul class="chips"><li>LangGraph</li><li>LangChain</li><li>Model Context Protocol (MCP) servers and clients</li><li>RAG</li><li>vector databases</li><li>multi-agent orchestration</li><li>A2A protocol</li><li>tool calling</li><li>prompt engineering</li></ul>
     </div>
     <div class="skill-group">
       <h3>Languages</h3>
-      <ul class="chips"><li>Python</li><li>Go</li><li>TypeScript / JavaScript</li><li>Node.js</li><li>React</li><li>C# / .NET</li><li>C++</li><li>SQL</li></ul>
+      <ul class="chips"><li>Python</li><li>Go</li><li>JavaScript</li><li>TypeScript</li><li>Node.js</li><li>React</li><li>C#</li><li>.NET</li><li>C++</li><li>SQL</li></ul>
     </div>
     <div class="skill-group">
-      <h3>Architecture &amp; data</h3>
-      <ul class="chips"><li>Distributed systems</li><li>Event-driven microservices</li><li>Transactional outbox</li><li>GraphQL Federation</li><li>REST</li><li>gRPC</li><li>PostgreSQL</li><li>SQL Server</li><li>MongoDB</li><li>Cassandra</li><li>Redis</li><li>Kafka</li><li>Snowflake</li></ul>
+      <h3>Machine Learning</h3>
+      <ul class="chips"><li>PyTorch</li><li>scikit-learn</li><li>neural networks</li><li>CNNs</li><li>LLM and transformer fundamentals</li><li>Streamlit</li></ul>
     </div>
     <div class="skill-group">
-      <h3>Cloud &amp; DevOps</h3>
-      <ul class="chips"><li>AWS</li><li>GitLab CI/CD</li><li>Observability</li><li>Grafana</li></ul>
+      <h3>Architecture</h3>
+      <ul class="chips"><li>distributed systems</li><li>event-driven microservices</li><li>transactional outbox</li><li>GraphQL Federation</li><li>REST</li><li>gRPC</li></ul>
+    </div>
+    <div class="skill-group">
+      <h3>Data</h3>
+      <ul class="chips"><li>PostgreSQL</li><li>SQL Server</li><li>MongoDB</li><li>Cassandra</li><li>Redis</li><li>Kafka</li><li>Snowflake</li></ul>
+    </div>
+    <div class="skill-group">
+      <h3>Cloud and DevOps</h3>
+      <ul class="chips"><li>AWS</li><li>GitLab CI/CD</li><li>observability</li><li>Grafana</li></ul>
     </div>
   </section>
 
   <section id="experience">
     <h2>Experience</h2>
-
     <div class="job">
       <div class="job-head"><h3>Senior Software Engineer <span class="org">· Avalara</span></h3><span class="date">Aug 2025 – Present</span></div>
       <ul>
-        <li>Build and maintain backend microservices for Avalara MyLodgeTax, a lodging-tax registration and filing SaaS platform for short-term rental owners and booking partners such as Vrbo.</li>
-        <li>Created an AI on-call Slack agent that combines RAG over historical incidents with an MCP-based tool-calling orchestrator to query production logs, Snowflake and GitLab, perform root-cause analysis on alerts and propose Jira tickets, automating about 100 resolutions per day with high fidelity.</li>
-        <li>Owned non-functional requirements alongside feature delivery, resolving production reliability, scalability and security issues and right-sizing Kubernetes workloads against production peak metrics.</li>
+    <li>Build and maintain ~20 backend microservices for Avalara MyLodgeTax, a lodging-tax registration and filing SaaS platform for short-term rental owners and booking partners such as Vrbo.</li>
+    <li>Created an AI on-call Slack agent that combines RAG over historical incidents with an MCP-based tool-calling orchestrator to query production logs, Snowflake and GitLab, perform root-cause analysis on alerts and propose Jira tickets, automating about 100 resolutions per day with high fidelity.</li>
+    <li>Owned non-functional requirements alongside feature delivery: reliability (out-of-memory crashes, poison-pill messages), scalability (query optimization and pagination, cutting one API's per-request payload from ~486 MB to ~234 KB), security (identified an insecure direct object reference risk, where changing an ID in the URL could expose another user's data, and helped establish a team-wide pattern to prevent it) and cost (right-sized Kubernetes CPU and memory requests by ~10–12% across 12 services based on production peak metrics).</li>
       </ul>
     </div>
-
     <div class="job">
       <div class="job-head"><h3>AI/ML Upskilling <span class="org">· Self-directed study</span></h3><span class="date">Nov 2024 – Jul 2025</span></div>
       <ul>
-        <li>Studied deep learning fundamentals: neural networks and backpropagation from scratch, CNNs, and character-level language models in PyTorch.</li>
-        <li>Completed the Hugging Face Agents Course and built LangGraph agents (orchestrator with subagents, MCP tools, A2A communication, human-in-the-loop approval) and RAG pipelines over vector databases.</li>
-        <li>Implemented a DNS server and an HTTP/1.1 server from scratch in Go.</li>
+    <li>Studied deep learning fundamentals, including neural networks and backpropagation from scratch, convolutional neural networks (CNNs) and language modelling, building character-level language models in PyTorch.</li>
+    <li>Completed the Hugging Face Agents Course and built LangGraph agents (orchestrator with subagents, MCP tools, A2A communication, human-in-the-loop approval) and RAG pipelines over vector databases.</li>
+    <li>Recorded 30+ live-streamed group study sessions on YouTube covering LangGraph agents, MCP and multi-agent patterns.</li>
+    <li>Implemented a DNS server with recursive resolution and an HTTP/1.1 server with gzip compression and persistent connections from scratch in Go.</li>
       </ul>
     </div>
-
     <div class="job">
-      <div class="job-head"><h3>Software Architect <span class="org">· ConnectWise (formerly Continuum)</span></h3><span class="date">Dec 2016 – Oct 2024</span></div>
+      <div class="job-head"><h3>Software Architect <span class="org">· ConnectWise LLC (formerly Continuum LLC)</span></h3><span class="date">Dec 2016 – Oct 2024</span></div>
       <ul>
-        <li>Member of the core engineering team that turned a slow monolith into a scalable, secure and resilient SaaS platform handling 5M+ requests per minute, which contributed to Continuum's acquisition by ConnectWise.</li>
-        <li>Developed a self-serve integration framework that let third-party vendors build integrations with the platform independently.</li>
-        <li>Designed and implemented a Go library that converts OpenAPI (Swagger) specifications into GraphQL schemas and resolvers.</li>
-        <li>Led a high-performance query solution and real-time dashboards for BrightGauge, cutting report and dashboard query costs by 90%.</li>
+    <li>Member of the core engineering team that transformed a slow, monolithic system into a highly scalable, secure and resilient SaaS platform handling more than 5 million requests per minute; the platform's success enabled rapid product delivery and contributed to Continuum's acquisition by ConnectWise.</li>
+    <li>Developed a self-serve integration framework that enabled third-party vendors to build integrations with the platform independently, giving partners a unified interface across products from multiple vendors.</li>
+    <li>Designed and implemented a Go library that automatically converts OpenAPI (Swagger) specifications into GraphQL schemas and resolvers, enabling seamless REST-to-GraphQL interoperability.</li>
+    <li>Led the design and implementation of a high-performance query solution and real-time dashboards for BrightGauge, a reporting and BI application, reducing report and dashboard query execution costs by 90%.</li>
       </ul>
     </div>
-
     <div class="job">
-      <div class="job-head"><h3>Senior Lead – Development <span class="org">· Opus Software Technologies</span></h3><span class="date">Jan 2013 – Dec 2016</span></div>
-      <ul><li>Led point-of-sale, forecourt and ATM application work for Wayne, Gilbarco and Diebold, and designed the POS-Loyalty rewards feature and its messaging protocol.</li></ul>
+      <div class="job-head"><h3>Senior Lead – Development <span class="org">· Opus Software Technologies Pvt. Ltd., Pune, India</span></h3><span class="date">Jan 2013 – Dec 2016</span></div>
+      <ul>
+    <li>Led design, implementation and defect resolution for point-of-sale, forecourt and ATM applications for major clients including Wayne (Nucleus), Gilbarco (Passport) and Diebold (Agilis 91x).</li>
+    <li>Designed and delivered the POS-Loyalty rewards feature, including a custom messaging protocol between POS systems and the loyalty server.</li>
+      </ul>
     </div>
-
     <div class="job">
-      <div class="job-head"><h3>IT Analyst <span class="org">· Tata Consultancy Services</span></h3><span class="date">Jul 2005 – Apr 2012</span></div>
-      <ul><li>Led USB 2.0 support for Corning's EPIC system and the CMT Hardware Removal initiative for Nortel Networks.</li></ul>
+      <div class="job-head"><h3>IT Analyst <span class="org">· Tata Consultancy Services Ltd., Mumbai, India</span></h3><span class="date">Jul 2005 – Apr 2012</span></div>
+      <ul>
+    <li>Led Windows-side development of USB 2.0 support for Corning's EPIC system, designing the communication protocol between Windows clients and Linux servers.</li>
+    <li>Led the CMT Hardware Removal initiative for Nortel Networks, consolidating two OAM&amp;P software suites onto a single Sun server and reducing hardware, operational and maintenance costs.</li>
+      </ul>
     </div>
   </section>
 
   <section id="education">
     <h2>Education</h2>
-    <div class="job">
-      <div class="job-head"><h3>B.Tech, Information Technology <span class="org">· MANIT Bhopal</span></h3><span class="date">2005</span></div>
-    </div>
+    <div class="job-head"><span style="font-weight:600">Bachelor of Technology, Information Technology</span><span class="date">2005</span></div>
+<div>Maulana Azad National Institute of Technology (MANIT), Bhopal, India; aggregate 73.9%</div>
   </section>
 
-  <section id="awards">
-    <h2>Awards &amp; teaching</h2>
+  <section id="additional">
+    <h2>Additional information</h2>
     <ul class="list">
-      <li><strong>CEO Circle of Excellence (Employee of the Year)</strong>, 2017</li>
-      <li><strong>Visiting Faculty, Sanjivani College of Engineering</strong>: designed and taught a one-credit course on real-world application development for three semesters.</li>
-      <li><strong>TCS awards</strong>: Best Code Reviewer (2011), Faculty of the Week, and Best Team for the CMT Hardware Removal project.</li>
-    </ul>
+  <li>CEO Circle of Excellence (Employee of the Year), 2017; internal TCS awards including Best Code Reviewer (2011) and Best Team for the CMT Hardware Removal project.</li>
+  <li>Visiting Faculty, Sanjivani College of Engineering, Kopargaon: designed and taught a one-credit course on real-world application development for three semesters.</li>
+  <li>For personal projects, blog posts, webinars and video tutorials, see the <a href="./">home page</a>.</li>
+</ul>
   </section>
 </main>
 <footer><div class="wrap">© 2026 Milind Adpaiker · <a href="./">Home</a> · <a href="https://www.linkedin.com/in/milind-adpaiker-770bb025/">LinkedIn</a> · <a href="mailto:milind.adpaiker@gmail.com">Email</a></div></footer>
