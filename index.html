@@ -4,217 +4,102 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Milind Adpaiker</title>
-<meta name="description" content="Milind Adpaiker – Senior Software Engineer at Avalara. Distributed systems, event-driven microservices and AI agents with LangGraph, MCP and RAG.">
-<meta property="og:title" content="Milind Adpaiker – Senior Software Engineer">
-<meta property="og:description" content="Distributed systems, event-driven microservices and AI agents (LangGraph, MCP, RAG).">
+<meta name="description" content="Milind Adpaiker – software engineer writing and building around distributed systems and AI agents. Articles, talks and projects.">
+<meta property="og:title" content="Milind Adpaiker">
+<meta property="og:description" content="Articles, talks and projects on distributed systems and AI agents.">
 <meta property="og:url" content="https://milindadpaiker.github.io/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230b2a5c'/><text x='32' y='42' font-family='Arial' font-size='28' font-weight='700' fill='white' text-anchor='middle'>MA</text></svg>">
-<style>
-  :root {
-    --bg: #fbfbfd; --surface: #ffffff; --text: #1b1f27; --muted: #5a6272;
-    --accent: #1f4fa8; --accent-soft: #e8eefb; --border: #e3e6ee;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0f131a; --surface: #161b24; --text: #e6e9ef; --muted: #9aa3b2;
-      --accent: #7aa7ff; --accent-soft: #1c2740; --border: #262d3a;
-    }
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
-  nav { position: sticky; top: 0; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); z-index: 10; }
-  nav .wrap { display: flex; gap: 18px; align-items: center; height: 54px; overflow-x: auto; white-space: nowrap; }
-  nav .brand { font-weight: 700; color: var(--text); margin-right: auto; }
-  nav a:not(.brand) { color: var(--muted); font-size: 14.5px; }
-  header.hero { padding: 72px 0 40px; }
-  .hero h1 { font-size: clamp(32px, 6vw, 46px); line-height: 1.15; margin: 0 0 10px; letter-spacing: -0.5px; }
-  .hero .role { font-size: 19px; color: var(--muted); margin: 0 0 18px; }
-  .hero p.lead { font-size: 17.5px; max-width: 680px; margin: 0 0 24px; }
-  .btns { display: flex; flex-wrap: wrap; gap: 10px; }
-  .btn { display: inline-block; padding: 9px 16px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); color: var(--text); font-weight: 600; font-size: 14.5px; }
-  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-  @media (prefers-color-scheme: dark) { .btn.primary { color: #0f131a; } }
-  .btn:hover { text-decoration: none; filter: brightness(1.05); }
-  section { padding: 34px 0; border-top: 1px solid var(--border); }
-  h2 { font-size: 22px; margin: 0 0 18px; }
-  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
-  .chips li { background: var(--accent-soft); color: var(--text); padding: 4px 11px; border-radius: 999px; font-size: 14px; }
-  .skill-group { margin-bottom: 16px; }
-  .skill-group h3 { font-size: 14px; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); margin: 0 0 8px; }
-  .job { margin-bottom: 26px; }
-  .job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; }
-  .job h3 { margin: 0; font-size: 17.5px; }
-  .job .org { color: var(--muted); }
-  .job .date { color: var(--muted); font-size: 14.5px; }
-  .job ul { margin: 8px 0 0; padding-left: 20px; }
-  .job li { margin-bottom: 4px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
-  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; display: flex; flex-direction: column; }
-  .card h3 { margin: 0 0 6px; font-size: 16.5px; }
-  .card p { margin: 0 0 12px; color: var(--muted); font-size: 15px; flex: 1; }
-  .card .tags { font-size: 13px; color: var(--muted); }
-  .list { list-style: none; padding: 0; margin: 0; }
-  .list li { padding: 12px 0; border-bottom: 1px solid var(--border); }
-  .list li:last-child { border-bottom: 0; }
-  .list .kind { font-size: 13px; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); }
-  footer { padding: 30px 0 50px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); }
-  @media (max-width: 560px) { header.hero { padding: 48px 0 28px; } nav .wrap { gap: 14px; } }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <nav>
   <div class="wrap">
-    <a class="brand" href="#top">Milind Adpaiker</a>
-    <a href="#experience">Experience</a>
-    <a href="#ai">AI work</a>
-    <a href="#projects">Projects</a>
-    <a href="#talks">Talks &amp; writing</a>
-    <a href="#contact">Contact</a>
+    <a class="brand" href="./">Milind Adpaiker</a>
+    <a href="#blog">Blog</a>
+    <a href="#published">Talks &amp; writing</a>
+    <a href="#built">Projects</a>
+    <a href="resume.html">Resume</a>
   </div>
 </nav>
 
-<main class="wrap" id="top">
+<main class="wrap">
   <header class="hero">
-    <h1>Milind Adpaiker</h1>
-    <p class="role">Senior Software Engineer at Avalara · Pune, India</p>
-    <p class="lead">I design and build distributed systems and scalable SaaS platforms, and more recently production AI agents. I have 20+ years of experience, including leading a monolith-to-microservices transformation that scaled a platform past 5 million requests per minute. Today I build agents with LangGraph, the Model Context Protocol (MCP) and retrieval-augmented generation (RAG).</p>
+    <h1>Hi, I'm Milind.</h1>
+    <p class="role">Software engineer · Distributed systems · AI agents</p>
+    <p class="lead">I've spent 20+ years building backend systems, from telecom software to SaaS platforms serving millions of requests a minute. These days I'm building AI agents with LangGraph, MCP and RAG. This is where I collect what I write, talk about and build.</p>
     <div class="btns">
-      <a class="btn primary" href="https://www.linkedin.com/in/milind-adpaiker-770bb025/">LinkedIn</a>
+      <a class="btn primary" href="resume.html">Resume</a>
+      <a class="btn" href="https://www.linkedin.com/in/milind-adpaiker-770bb025/">LinkedIn</a>
       <a class="btn" href="https://github.com/milindadpaiker">GitHub</a>
       <a class="btn" href="mailto:milind.adpaiker@gmail.com">Email</a>
     </div>
   </header>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skill-group">
-      <h3>Generative AI &amp; agents</h3>
-      <ul class="chips"><li>LangGraph</li><li>LangChain</li><li>MCP servers &amp; clients</li><li>RAG</li><li>pgvector</li><li>Weaviate</li><li>Multi-agent orchestration</li><li>A2A protocol</li><li>Tool calling</li><li>Prompt engineering</li><li>Claude Code agent skills</li><li>Hugging Face</li></ul>
-    </div>
-    <div class="skill-group">
-      <h3>Machine learning</h3>
-      <ul class="chips"><li>PyTorch</li><li>scikit-learn</li><li>Neural networks</li><li>CNNs</li><li>LLM &amp; transformer fundamentals</li><li>Streamlit</li></ul>
-    </div>
-    <div class="skill-group">
-      <h3>Languages</h3>
-      <ul class="chips"><li>Python</li><li>Go</li><li>TypeScript / JavaScript</li><li>Node.js</li><li>C# / .NET</li><li>C++</li><li>SQL</li><li>React</li></ul>
-    </div>
-    <div class="skill-group">
-      <h3>Architecture, data &amp; cloud</h3>
-      <ul class="chips"><li>Distributed systems</li><li>Event-driven microservices</li><li>GraphQL Federation</li><li>REST</li><li>gRPC</li><li>Kafka</li><li>PostgreSQL</li><li>SQL Server</li><li>Cassandra</li><li>MongoDB</li><li>Redis</li><li>Snowflake</li><li>AWS</li><li>Kubernetes</li><li>Helm</li><li>GitLab CI/CD</li><li>Grafana · Loki · Prometheus</li></ul>
+  <section id="blog">
+    <h2>Blog</h2>
+    <div class="card soon">
+      <div class="kind">Coming soon</div>
+      <h3>Notes from building AI agents and distributed systems</h3>
+      <p>Write-ups on LangGraph agents, MCP tooling and RAG in production, plus lessons from scaling event-driven microservices.</p>
     </div>
   </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-
-    <div class="job">
-      <div class="job-head"><h3>Senior Software Engineer <span class="org">· Avalara</span></h3><span class="date">Aug 2025 – Present</span></div>
-      <ul>
-        <li>Backend microservices for Avalara MyLodgeTax, a lodging-tax registration and filing platform for short-term rental owners and booking partners such as Vrbo (Node.js, .NET, GraphQL, PostgreSQL, SQL Server, AWS, Kubernetes).</li>
-        <li>Extended an AI on-call Slack agent (RAG over past incidents) with an MCP-based tool-calling orchestrator for root-cause analysis across logs, Snowflake and GitLab.</li>
-        <li>Built AI agent skills that automate production dead-letter-queue and support-ticket triage, and improved the team's internal MCP servers.</li>
-        <li>Fixed production reliability issues (out-of-memory crashes, poison-pill messages, API over-fetching) and right-sized Kubernetes workloads.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-head"><h3>AI/ML Upskilling <span class="org">· Career break</span></h3><span class="date">Nov 2024 – Jul 2025</span></div>
-      <ul>
-        <li>Deep learning fundamentals: neural networks and backpropagation from scratch, CNNs, and character-level language models (Andrej Karpathy's makemore series).</li>
-        <li>Hugging Face Agents Course; built LangGraph agents with orchestrator/subagents, MCP tools, A2A communication and human-in-the-loop approval.</li>
-        <li>RAG pipelines with Weaviate and pgvector; systems projects in Go.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-head"><h3>Software Architect <span class="org">· ConnectWise (formerly Continuum)</span></h3><span class="date">Dec 2016 – Oct 2024</span></div>
-      <ul>
-        <li>Core team that turned a monolith into an event-driven SaaS platform handling 5M+ requests per minute, which contributed to Continuum's acquisition by ConnectWise.</li>
-        <li>Self-serve integration framework for third-party vendors; a Go library that converts OpenAPI specs into GraphQL schemas and resolvers.</li>
-        <li>Cut BrightGauge report and dashboard query costs by 90% and built real-time dashboards.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-head"><h3>Senior Lead – Development <span class="org">· Opus Software Technologies</span></h3><span class="date">Jan 2013 – Dec 2016</span></div>
-      <ul><li>Point-of-sale, forecourt and ATM applications for Wayne, Gilbarco and Diebold; designed the POS-Loyalty feature and its messaging protocol.</li></ul>
-    </div>
-
-    <div class="job">
-      <div class="job-head"><h3>IT Analyst <span class="org">· Tata Consultancy Services</span></h3><span class="date">Jul 2005 – Apr 2012</span></div>
-      <ul><li>Telecom OAM&amp;P software for Nortel Networks and USB 2.0 support for Corning's EPIC system.</li></ul>
-    </div>
-  </section>
-
-  <section id="ai">
-    <h2>AI &amp; agent work</h2>
+  <section id="published">
+    <h2>Talks &amp; writing</h2>
     <div class="grid">
       <div class="card">
-        <h3>AI on-call agent</h3>
-        <p>A Slack agent that retrieves similar past incidents with RAG, then calls MCP tools for logs, Snowflake and GitLab to analyse the root cause of production alerts and propose Jira tickets. Runs on Kubernetes.</p>
-        <div class="tags">Python · MCP · RAG · pgvector · Helm</div>
+        <div class="kind">Articles</div>
+        <h3>ConnectWise engineering blog</h3>
+        <p>My posts on the ConnectWise engineering blog about building and running platform services at scale.</p>
+        <a href="https://www.connectwise.com/en-au/blog/engineering?authors=milindadpaiker">Read the posts →</a>
       </div>
       <div class="card">
-        <h3>Agentic triage skills</h3>
-        <p>Agent skills that investigate production dead-letter queues and support tickets end-to-end across code, logs, databases and Jira, then draft findings for engineers to review.</p>
-        <div class="tags">Claude Code · MCP · Jira · Confluence</div>
+        <div class="kind">Webinar</div>
+        <h3>Microservice Real Talk: Scaling Microservices</h3>
+        <p>A public TechGig webinar on scaling microservice architectures.</p>
       </div>
       <div class="card">
-        <h3>LangGraph multi-agent systems</h3>
-        <p>An orchestrator that classifies intent, plans and routes to subagents using local and MCP tools, A2A communication, RAG grounding and human-in-the-loop approval.</p>
-        <div class="tags">LangGraph · A2A · MCP · RAG</div>
+        <div class="kind">Talk</div>
+        <h3>Resiliency patterns in microservices</h3>
+        <p>An in-person engineering talk on resiliency patterns that help microservices handle failure gracefully.</p>
       </div>
     </div>
   </section>
 
-  <section id="projects">
-    <h2>Open-source projects</h2>
+  <section id="built">
+    <h2>Things I've built</h2>
     <div class="grid">
+      <div class="card feature">
+        <img src="img/random-bookmark-opener.jpg" alt="Random Bookmark Opener icon" width="64" height="64">
+        <div>
+          <div class="kind">Chrome extension</div>
+          <h3>Random Bookmark Opener</h3>
+          <p>Opens a random bookmark from your collection, with an optional date-range filter. It's a fun way to rediscover articles, tools and resources you saved ages ago and forgot about. I made it for myself and published it in case others find it useful too.</p>
+          <a href="https://chromewebstore.google.com/detail/random-bookmark-opener/afnfokpghodhpoifhkodighigcfgfpkj">Get it on the Chrome Web Store →</a>
+        </div>
+      </div>
       <div class="card">
+        <div class="kind">Go</div>
         <h3>dns-server-go</h3>
-        <p>A DNS server written from scratch in Go that parses and builds DNS packets and resolves queries recursively.</p>
+        <p>A DNS server from scratch that parses and builds DNS packets and resolves queries recursively.</p>
         <a href="https://github.com/milindadpaiker/dns-server-go">View on GitHub →</a>
       </div>
       <div class="card">
+        <div class="kind">Go</div>
         <h3>http-server-go</h3>
-        <p>An HTTP/1.1 server in Go with a file server, gzip response compression and persistent connections.</p>
+        <p>An HTTP/1.1 server with a static file server, gzip compression and persistent connections.</p>
         <a href="https://github.com/milindadpaiker/http-server-go">View on GitHub →</a>
       </div>
       <div class="card">
+        <div class="kind">Go</div>
         <h3>velocitylimits</h3>
-        <p>A Go command-line app that accepts or declines fund loads in real time against configurable velocity rules, with pluggable sources and sinks.</p>
+        <p>A CLI that accepts or declines fund loads in real time against configurable velocity rules, with pluggable sources and sinks.</p>
         <a href="https://github.com/milindadpaiker/velocitylimits">View on GitHub →</a>
       </div>
     </div>
     <p style="margin-top:16px"><a href="https://github.com/milindadpaiker?tab=repositories">All repositories on GitHub →</a></p>
   </section>
-
-  <section id="talks">
-    <h2>Talks, writing &amp; teaching</h2>
-    <ul class="list">
-      <li><div class="kind">Webinar</div><strong>Microservice Real Talk: Scaling Microservices</strong> on TechGig, a public webinar on scaling microservice architectures.</li>
-      <li><div class="kind">Tech talk</div><strong>Resiliency patterns in microservices</strong>, an in-person engineering talk.</li>
-      <li><div class="kind">Blog</div><a href="https://www.connectwise.com/en-au/blog/engineering?authors=milindadpaiker"><strong>Engineering blog posts on ConnectWise</strong></a>, articles on the ConnectWise engineering blog.</li>
-      <li><div class="kind">Teaching</div><strong>Visiting Faculty, Sanjivani College of Engineering</strong>. I designed and taught a one-credit course on real-world application development for three semesters.</li>
-      <li><div class="kind">Award</div><strong>CEO Circle of Excellence (Employee of the Year), 2017</strong></li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Open to conversations about distributed systems, AI agents and engineering roles.</p>
-    <div class="btns">
-      <a class="btn primary" href="mailto:milind.adpaiker@gmail.com">milind.adpaiker@gmail.com</a>
-      <a class="btn" href="https://www.linkedin.com/in/milind-adpaiker-770bb025/">LinkedIn</a>
-      <a class="btn" href="https://github.com/milindadpaiker">GitHub</a>
-    </div>
-  </section>
 </main>
-<footer><div class="wrap">© 2026 Milind Adpaiker</div></footer>
+<footer><div class="wrap">© 2026 Milind Adpaiker · <a href="resume.html">Resume</a> · <a href="https://www.linkedin.com/in/milind-adpaiker-770bb025/">LinkedIn</a> · <a href="mailto:milind.adpaiker@gmail.com">Email</a></div></footer>
 </body>
 </html>

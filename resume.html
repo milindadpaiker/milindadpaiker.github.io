@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resume · Milind Adpaiker</title>
+<meta name="description" content="Resume of Milind Adpaiker, Senior Software Engineer at Avalara: distributed systems, event-driven microservices and AI agents (LangGraph, MCP, RAG).">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230b2a5c'/><text x='32' y='42' font-family='Arial' font-size='28' font-weight='700' fill='white' text-anchor='middle'>MA</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="brand" href="./">Milind Adpaiker</a>
+    <a href="./#blog">Blog</a>
+    <a href="./#published">Talks &amp; writing</a>
+    <a href="./#built">Projects</a>
+    <a class="active" href="resume.html">Resume</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header class="hero">
+    <p class="eyebrow">Resume</p>
+    <h1>Milind Adpaiker</h1>
+    <p class="role">Senior Software Engineer at Avalara · Goa, India</p>
+    <p class="lead">Software engineer and former software architect with 20+ years of experience designing and building distributed systems and scalable SaaS platforms. I led the transformation of a monolith into event-driven microservices handling more than 5 million requests per minute, and I now build production AI agents with LangGraph, the Model Context Protocol (MCP) and retrieval-augmented generation (RAG).</p>
+    <div class="btns">
+      <a class="btn primary" href="https://www.linkedin.com/in/milind-adpaiker-770bb025/">LinkedIn</a>
+      <a class="btn" href="mailto:milind.adpaiker@gmail.com">Email</a>
+    </div>
+  </header>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-group">
+      <h3>Generative AI &amp; agents</h3>
+      <ul class="chips"><li>LangGraph</li><li>LangChain</li><li>MCP servers &amp; clients</li><li>RAG</li><li>Vector databases</li><li>Multi-agent orchestration</li><li>A2A protocol</li><li>Tool calling</li><li>Prompt engineering</li></ul>
+    </div>
+    <div class="skill-group">
+      <h3>Machine learning</h3>
+      <ul class="chips"><li>PyTorch</li><li>scikit-learn</li><li>Neural networks</li><li>CNNs</li><li>LLM &amp; transformer fundamentals</li><li>Streamlit</li></ul>
+    </div>
+    <div class="skill-group">
+      <h3>Languages</h3>
+      <ul class="chips"><li>Python</li><li>Go</li><li>TypeScript / JavaScript</li><li>Node.js</li><li>React</li><li>C# / .NET</li><li>C++</li><li>SQL</li></ul>
+    </div>
+    <div class="skill-group">
+      <h3>Architecture &amp; data</h3>
+      <ul class="chips"><li>Distributed systems</li><li>Event-driven microservices</li><li>Transactional outbox</li><li>GraphQL Federation</li><li>REST</li><li>gRPC</li><li>PostgreSQL</li><li>SQL Server</li><li>MongoDB</li><li>Cassandra</li><li>Redis</li><li>Kafka</li><li>Snowflake</li></ul>
+    </div>
+    <div class="skill-group">
+      <h3>Cloud &amp; DevOps</h3>
+      <ul class="chips"><li>AWS</li><li>GitLab CI/CD</li><li>Observability</li><li>Grafana</li></ul>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-head"><h3>Senior Software Engineer <span class="org">· Avalara</span></h3><span class="date">Aug 2025 – Present</span></div>
+      <ul>
+        <li>Build and maintain backend microservices for Avalara MyLodgeTax, a lodging-tax registration and filing platform for short-term rental owners and booking partners such as Vrbo (Node.js, .NET, GraphQL, PostgreSQL, SQL Server, AWS, Kubernetes).</li>
+        <li>Extended an AI on-call Slack agent that uses RAG over past incidents with an MCP-based tool-calling orchestrator, which queries production logs, Snowflake and GitLab to analyse the root cause of alerts and propose Jira tickets.</li>
+        <li>Built AI agent skills that automate triage of production dead-letter queues and support tickets, and enhanced the team's internal MCP servers.</li>
+        <li>Resolved production reliability issues, including out-of-memory crashes, poison-pill messages and API over-fetching, and right-sized Kubernetes workloads against production peak metrics.</li>
+        <li>Delivered partner-integration features, including event-driven partner notifications, customer-linking APIs and the move of all sign-up flows to the new checkout service.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><h3>AI/ML Upskilling <span class="org">· Self-directed study</span></h3><span class="date">Nov 2024 – Jul 2025</span></div>
+      <ul>
+        <li>Studied deep learning fundamentals: neural networks and backpropagation from scratch, CNNs, and character-level language models in PyTorch.</li>
+        <li>Completed the Hugging Face Agents Course and built LangGraph agents (orchestrator with subagents, MCP tools, A2A communication, human-in-the-loop approval) and RAG pipelines over vector databases.</li>
+        <li>Implemented a DNS server and an HTTP/1.1 server from scratch in Go.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><h3>Software Architect <span class="org">· ConnectWise (formerly Continuum)</span></h3><span class="date">Dec 2016 – Oct 2024</span></div>
+      <ul>
+        <li>Member of the core engineering team that turned a slow monolith into a scalable, secure and resilient SaaS platform handling 5M+ requests per minute, which contributed to Continuum's acquisition by ConnectWise.</li>
+        <li>Developed a self-serve integration framework that let third-party vendors build integrations with the platform independently.</li>
+        <li>Designed and implemented a Go library that converts OpenAPI (Swagger) specifications into GraphQL schemas and resolvers.</li>
+        <li>Led a high-performance query solution and real-time dashboards for BrightGauge, cutting report and dashboard query costs by 90%.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><h3>Senior Lead – Development <span class="org">· Opus Software Technologies</span></h3><span class="date">Jan 2013 – Dec 2016</span></div>
+      <ul><li>Led point-of-sale, forecourt and ATM application work for Wayne, Gilbarco and Diebold, and designed the POS-Loyalty rewards feature and its messaging protocol.</li></ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><h3>IT Analyst <span class="org">· Tata Consultancy Services</span></h3><span class="date">Jul 2005 – Apr 2012</span></div>
+      <ul><li>Led USB 2.0 support for Corning's EPIC system and the CMT Hardware Removal initiative for Nortel Networks.</li></ul>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="job">
+      <div class="job-head"><h3>B.Tech, Information Technology <span class="org">· MANIT Bhopal</span></h3><span class="date">2005</span></div>
+    </div>
+  </section>
+
+  <section id="awards">
+    <h2>Awards &amp; teaching</h2>
+    <ul class="list">
+      <li><strong>CEO Circle of Excellence (Employee of the Year)</strong>, 2017</li>
+      <li><strong>Visiting Faculty, Sanjivani College of Engineering</strong>: designed and taught a one-credit course on real-world application development for three semesters.</li>
+      <li><strong>TCS awards</strong>: Best Code Reviewer (2011), Faculty of the Week, and Best Team for the CMT Hardware Removal project.</li>
+    </ul>
+  </section>
+</main>
+<footer><div class="wrap">© 2026 Milind Adpaiker · <a href="./">Home</a> · <a href="https://www.linkedin.com/in/milind-adpaiker-770bb025/">LinkedIn</a> · <a href="mailto:milind.adpaiker@gmail.com">Email</a></div></footer>
+</body>
+</html>
